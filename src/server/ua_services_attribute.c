@@ -35,7 +35,7 @@ typeEquivalence(const UA_DataType *t) {
     return TYPE_EQUIVALENCE_NONE;
 }
 
-static const UA_DataType *
+const UA_DataType *
 findDataType(const UA_NodeId *typeId) {
     for(size_t i = 0; i < UA_TYPES_COUNT; ++i) {
         if(UA_TYPES[i].typeId.identifier.numeric == typeId->identifier.numeric)
